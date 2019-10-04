@@ -31,7 +31,7 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+import api from "../../../api";
 
 export default {
   name: "user-card",
@@ -49,7 +49,7 @@ export default {
         password: this.password
       };
       //this.$router.push("/");
-      axios
+      api
         .post("http://localhost:8000/admin_login", user)
         .then(res => {
           if (res.status == 200) {
