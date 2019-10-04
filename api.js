@@ -1,7 +1,7 @@
 import axios from "axios";
 
 let api = axios.create({
-  baseURL: "http://localhost:8000/"
+  baseURL: "https://forever-express-mysql.herokuapp.com/"
 });
 
 export default api;
