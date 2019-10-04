@@ -21,6 +21,10 @@
         <md-icon>notifications</md-icon>
         <p>List Promotions</p>
       </sidebar-link>
+      <sidebar-link to="/list_commandes">
+        <md-icon>notifications</md-icon>
+        <p>List Commandes</p>
+      </sidebar-link>
     </side-bar>
 
     <div class="main-panel">

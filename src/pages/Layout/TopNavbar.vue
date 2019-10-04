@@ -17,9 +17,7 @@
 
         <div class="md-collapse">
           <div class="md-autocomplete">
-            <md-autocomplete class="search" v-model="selectedEmployee" :md-options="employees">
-              <label>Search...</label>
-            </md-autocomplete>
+            <md-button class="md-round md-info" @click="logout">Deconnexion</md-button>
           </div>
           <md-list>
             <md-list-item href="#/">
@@ -70,6 +68,9 @@ export default {
   methods: {
     toggleSidebar() {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
+    },
+    logout() {
+      this.$router.push("/login");
     }
   }
 };
