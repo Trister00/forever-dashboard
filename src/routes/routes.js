@@ -27,6 +27,9 @@ import ListCommandes from "../pages/Commandes/ListCommandes.vue";
 //Login
 import Login from "../pages/Connexion/Login.vue";
 
+//Entrepreneur
+import ListEntrepreneur from "../pages/Entrepreneur/ListEntrepreuneur.vue";
+
 const routes = [
   {
     path: "/",
@@ -88,6 +91,11 @@ const routes = [
         path: "list_commandes",
         name: "List Commandes",
         component: ListCommandes
+      },
+      {
+        path: "list_entrepreneurs",
+        name: "List Entrepreneurs",
+        component: ListEntrepreneur
       }
     ]
   },

@@ -70,6 +70,7 @@ export default {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
     },
     logout() {
+      localStorage.removeItem("userInfo");
       this.$router.push("/login");
     }
   }

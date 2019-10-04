@@ -14,6 +14,7 @@
                   <md-table-cell md-label="Nom">{{ pan.Nom }}</md-table-cell>
                   <md-table-cell md-label="Nom">Qte : {{ pan.Quantite }}</md-table-cell>
                   <md-table-cell md-label="Nom">Cout : {{ pan.Cout_total }}</md-table-cell>
+                  <md-table-cell md-label="adresse">Adresse : {{ pan.Adresse }}</md-table-cell>
 
                   <md-table-cell md-label="Action">
                     <!-- <md-button class="md-info">Visualiser</md-button>

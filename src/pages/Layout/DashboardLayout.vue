@@ -25,6 +25,10 @@
         <md-icon>notifications</md-icon>
         <p>List Commandes</p>
       </sidebar-link>
+      <sidebar-link to="/list_entrepreneurs">
+        <md-icon>notifications</md-icon>
+        <p>List Entrepreneurs</p>
+      </sidebar-link>
     </side-bar>
 
     <div class="main-panel">
@@ -49,6 +53,11 @@ export default {
     DashboardContent,
     ContentFooter,
     MobileMenu
+  },
+  mounted() {
+    if (localStorage.getItem("userInfo") === null) {
+      this.$router.push("/login");
+    }
   }
 };
 </script>
