@@ -50,7 +50,7 @@ export default {
       };
       //this.$router.push("/");
       api
-        .post("http://localhost:8000/admin_login", user)
+        .post("/admin_login", user)
         .then(res => {
           if (res.status == 200) {
             localStorage.setItem("userInfo", JSON.stringify(res.data));
