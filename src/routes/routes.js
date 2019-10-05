@@ -20,6 +20,7 @@ import ModifierCategorie from "../pages/Categories/ModifierCategorie.vue";
 import ListPromotion from "../pages/Promotion/ListPromotion.vue";
 import AjouterPromotion from "../pages/Promotion/AjouterPromotion.vue";
 import ModifierPromotion from "../pages/Promotion/ModifierPromotion.vue";
+import CommandesPromo from "../pages/Promotion/CommandesPromo.vue";
 
 //Commandes
 import ListCommandes from "../pages/Commandes/ListCommandes.vue";
@@ -86,6 +87,11 @@ const routes = [
         path: "ajouter_promotion",
         name: "Ajouter Promotion",
         component: AjouterPromotion
+      },
+      {
+        path: "commandes_promo",
+        name: "List Commandes des Promos",
+        component: CommandesPromo
       },
       {
         path: "list_commandes",

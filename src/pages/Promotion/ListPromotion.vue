@@ -14,12 +14,12 @@
                   <md-table-cell md-label="Nom">{{ promo.Nom_Promo }}</md-table-cell>
                   <md-table-cell md-label="Nom">{{ promo.Prix_total }}</md-table-cell>
 
-                  <!-- <md-table-cell md-label="Action">
-                    <md-button class="md-info">Visualiser</md-button>
-                    <md-button class="md-warning" @click="modifier(promo)">Modifier</md-button>
+                  <md-table-cell md-label="Action">
+                    <!-- <md-button class="md-info">Visualiser</md-button>
+                    <md-button class="md-warning" @click="modifier(promo)">Modifier</md-button>-->
 
-                    <md-button class="md-danger" @click="supprimer(promo)">Supprimer</md-button>
-                  </md-table-cell>-->
+                    <md-button class="md-danger" @click="supprimer(promo.Id)">Supprimer</md-button>
+                  </md-table-cell>
                 </md-table-row>
               </md-table>
             </div>
@@ -48,12 +48,14 @@ export default {
       //this.$router.push({ name: "Modifier Promotion", params: { id: c.Id } });
     },
     supprimer(p) {
-      console.log(c.Id);
-      // if (confirm("Voulez vous vraiment supprimer cette Promo ?")) {
-      //   api.delete(`/categories/${c.Id}`).then(res => {
-      //     this.$router.go();
-      //   });
-      // }
+      console.log(p);
+      if (confirm("Voulez vous vraiment supprimer cette Promo ?")) {
+        api.delete(`/promo/${p}`).then(res => {
+          if (res.status == 200) {
+            this.$router.go();
+          }
+        });
+      }
     },
     nouveau() {
       this.$router.push({ name: "Ajouter Promotion" });
